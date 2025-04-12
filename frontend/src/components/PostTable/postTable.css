@@ -1,0 +1,81 @@
+.post-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .post-table th,
+  .post-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .post-table th {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  .post-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .post-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .post-table th:nth-child(1),
+  .post-table td:nth-child(1) {
+    width: 15%; /* Cột URL */
+  }
+  
+  .post-table th:nth-child(2),
+  .post-table td:nth-child(2) {
+    width: 55%; /* Cột Nội dung */
+  }
+  
+  .post-table th:nth-child(3),
+  .post-table td:nth-child(3) {
+    width: 15%; /* Cột Loại (nếu có) */
+  }
+  
+  .post-table th.action-column,
+  .post-table td.action-column {
+    width: 15%; /* Cột Chức năng */
+    text-align: center;
+  }
+  
+  .post-table button {
+    padding: 5px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .post-table button:first-child {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .post-table button:first-child:hover {
+    background-color: #45a049;
+  }
+  
+  .post-table button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .post-table button:nth-child(2):hover {
+    background-color: #da190b;
+  }
+  
+  .post-table textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+  }

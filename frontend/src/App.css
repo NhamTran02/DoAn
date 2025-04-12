@@ -1,0 +1,215 @@
+.App {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.main-menu button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-menu button.active {
+  background-color: #0056b3;
+}
+
+.main-menu button:hover:not(.active) {
+  background-color: #0056b3;
+}
+
+.menu-container {
+  display: flex;
+  min-height: 500px;
+}
+
+.taskbar {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.taskbar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.taskbar button.active {
+  background-color: #0056b3;
+}
+
+.taskbar button:hover:not(.active) {
+  background-color: #0056b3;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.section {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #555;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.result h3,
+.error h3 {
+  margin: 10px 0;
+}
+
+.result p {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error p {
+  color: #dc3545;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.url-column {
+  width: 30%;
+  min-width: 30%;
+  max-width: 30%;
+  word-break: break-all;
+}
+
+.content-column {
+  width: 60%;
+  min-width: 60%;
+  max-width: 60%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.type-column {
+  width: 10%;
+  min-width: 10%;
+  max-width: 10%;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.trung-lập {
+  color: #6c757d;
+  font-weight: bold;
+}
+
+.tiêu-cực {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.tích-cực {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.không-xác-định {
+  color: #ffca2c;
+  font-weight: bold;
+}

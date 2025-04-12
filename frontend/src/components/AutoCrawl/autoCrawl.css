@@ -1,0 +1,191 @@
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.section button {
+  padding: 10px 20px;
+  background-color: #36A2EB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.section button:hover:not(:disabled) {
+  background-color: #2a8cd1;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+.posts-table {
+  margin-top: 20px;
+}
+
+.posts-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.posts-table th,
+.posts-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.posts-table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.posts-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.posts-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* CSS cho loading video */
+.loading {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-video {
+  width: 150px; /* Điều chỉnh kích thước video */
+  height: auto;
+}
+
+.loading p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Container cho thông báo */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Tăng khoảng cách giữa các thông báo */
+}
+
+/* Kiểu cho thông báo */
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid transparent; /* Để sử dụng gradient */
+  border-image: linear-gradient(45deg, #28a745, #4cd964) 1; /* Gradient viền cho thông báo thành công */
+  border-radius: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Bóng đổ mềm mại hơn */
+  animation: slideIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Hiệu ứng mượt mà hơn */
+  width: 320px; /* Tăng chiều rộng một chút */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+/* Hiệu ứng slide-in */
+@keyframes slideIn {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Hiệu ứng slide-out khi đóng */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+/* Áp dụng hiệu ứng slide-out khi thông báo biến mất */
+.notification.exit {
+  animation: slideOut 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* Hiệu ứng hover cho thông báo */
+.notification:hover {
+  transform: translateY(-2px); /* Nhấc lên nhẹ khi hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+}
+
+/* Biểu tượng dấu check hoặc dấu X */
+.notification-icon {
+  margin-right: 12px;
+}
+
+/* Nội dung thông báo */
+.notification-message {
+  flex: 1;
+  font-size: 15px; /* Tăng kích thước chữ một chút */
+  font-weight: 500; /* Chữ đậm nhẹ */
+  color: #2d2d2d; /* Màu chữ tối hơn */
+  line-height: 1.4; /* Tăng khoảng cách dòng */
+}
+
+/* Nút đóng */
+.notification-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666; /* Màu xám đậm hơn */
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%; /* Làm tròn nút đóng */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+/* Hiệu ứng hover cho nút đóng */
+.notification-close:hover {
+  background-color: #f0f0f0; /* Nền xám nhạt khi hover */
+  color: #333; /* Màu chữ đậm hơn khi hover */
+}
+
+/* Kiểu cho thông báo lỗi */
+.notification.error {
+  border-image: linear-gradient(45deg, #dc3545, #ff6b6b) 1; /* Gradient viền đỏ cho thông báo lỗi */
+}
+
+/* Biểu tượng dấu X trong thông báo lỗi */
+.notification.error .notification-icon svg path {
+  stroke: #dc3545; /* Màu đỏ cho biểu tượng lỗi */
+}
